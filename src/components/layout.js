@@ -39,9 +39,9 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
+          © {new Date().getFullYear()} &middot; MR.Teclas 2.0
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://abdel.tandempatrimonionacional.eu/">WEB</a>
         </footer>
       </div>
     </>

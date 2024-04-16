@@ -73,17 +73,20 @@ const IndexPage = () => (
   <Layout>
     {/* <div className={styles.textCenter}> */}
       <StaticImage
-        src="../images/example.png"
+        src="../images/imagen-principal-web-gatsby.jpg"
         loading="eager"
-        width={64}
+        height={500}
+        width={900}
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b> Super Gatsby!</b>
+      ¡Hola! <b> Soy MR. Teclas 2.0</b>
       </h1>
+      <p>Desde esta página, podrás acceder a mi blog (en todos los enlaces <a href="https://abdel.tandempatrimonionacional.eu/">WEB</a> que veas en esta página) sobre proyectos como desarollador web orientado a resultados, que crea y administra sitios web y aplicaciones web que conducen al éxito del producto general </p>
+
       {/* <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
@@ -123,6 +126,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Inicio" />
 
 export default IndexPage
