@@ -6,12 +6,19 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import {
+  container,
+  heading,
+  navLinks,
+  navLinkItem,
+  navLinkText
+} from './index.module.css'
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,7 +39,18 @@ const Layout = ({ children }) => {
           padding: `var(--size-gutter)`,
         }}
       >
-        <main>{children}</main>
+        <nav>
+       <ul className={navLinks}>
+         <li className={navLinkItem}><Link className={navLinkText} to="/index">Inicio</Link></li>
+         
+         <li className={navLinkItem}><Link className={navLinkText} to="/proyectos">Proyectos</Link></li>
+        
+         <li className={navLinkItem}><Link className={navLinkText} to="/contacto">Contacto</Link></li>       
+       </ul>
+     </nav>
+        <main>
+          <h1 className={heading}>{pageTitle}</h1>
+          {children}
         <footer
           style={{
             marginTop: `var(--space-5)`,
@@ -43,6 +61,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://abdel.tandempatrimonionacional.eu/">WEB</a>
         </footer>
+        </main> 
       </div>
     </>
   )
